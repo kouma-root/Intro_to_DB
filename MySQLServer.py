@@ -9,7 +9,7 @@ mydb = mysql.connector.connect(
 mycursor = mydb.cursor()
 try:
     mycursor.execute("CREATE DATABASE IF NOT EXISTS alx_book_store")
-except Exception as e:
+except mysql.connector.Error as e:
     print(e)
 else:
     print("Database 'alx_book_store' created successfully!")
